@@ -90,7 +90,7 @@ const ChatArea = ({ selectedGroup, socket, setSelectedGroup }) => {
     const token = currentUser?.token;
     try {
       const { data } = await axios.get(
-        `https://parab-chat-app.onrender.com/api/messages/${selectedGroup?._id}`,
+        `https://parab-chat-app-backend.onrender.com/api/messages/${selectedGroup?._id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -112,7 +112,7 @@ const ChatArea = ({ selectedGroup, socket, setSelectedGroup }) => {
     try {
       const token = currentUser.token;
       const { data } = await axios.post(
-        "https://parab-chat-app.onrender.com/api/messages",
+        "https://parab-chat-app-backend.onrender.com/api/messages",
         {
           content: newMessage,
           groupId: selectedGroup?._id,
