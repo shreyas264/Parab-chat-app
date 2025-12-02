@@ -50,7 +50,7 @@ const Sidebar = ({ setSelectedGroup }) => {
     try {
       const userInfo = JSON.parse(localStorage.getItem("userInfo") || {});
       const token = userInfo.token;
-      const { data } = await axios.get("http://https://parab-chat-app.onrender.com/api/groups", {
+      const { data } = await axios.get("https://parab-chat-app.onrender.com/api/groups", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
