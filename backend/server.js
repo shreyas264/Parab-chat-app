@@ -14,14 +14,14 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["https://gorgeous-boba-2b9349.netlify.app"],
+    origin: ["https://parab-chat-app-frontend.onrender.com"],
     methods: ["GET", "POST"],
     credentials: true,
   },
 });
 // middlewares
 app.use(cors({
-  origin: "https://gorgeous-boba-2b9349.netlify.app",  // allow frontend
+  origin: "https://parab-chat-app-frontend.onrender.com",  // allow frontend
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
