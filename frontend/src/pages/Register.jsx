@@ -25,7 +25,7 @@ const Register = () => {
     setLoading(true)
     try {
       const {data} = await axios.post(
-        "http://localhost:5000/api/users/register",
+        "https://parab-chat-app.onrender.com/api/users/register",
         {
           email,
           password,

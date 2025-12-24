@@ -50,7 +50,7 @@ const Sidebar = ({ setSelectedGroup }) => {
     try {
       const userInfo = JSON.parse(localStorage.getItem("userInfo") || {});
       const token = userInfo.token;
-      const { data } = await axios.get("http://localhost:5000/api/groups", {
+      const { data } = await axios.get("https://parab-chat-app.onrender.com/api/groups", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -77,7 +77,7 @@ const Sidebar = ({ setSelectedGroup }) => {
       const userInfo = JSON.parse(localStorage.getItem("userInfo") || {});
       const token = userInfo.token;
       await axios.post(
-        "http://localhost:5000/api/groups",
+        "https://parab-chat-app.onrender.com/api/groups",
         {
           name: newGroupName,
           description: newGroupDescription,
@@ -119,7 +119,7 @@ const Sidebar = ({ setSelectedGroup }) => {
       const userInfo = JSON.parse(localStorage.getItem("userInfo") || {});
       const token = userInfo.token;
       await axios.post(
-        `http://localhost:5000/api/groups/${groupId}/join`,
+        `https://parab-chat-app.onrender.com/api/groups/${groupId}/join`,
         {},
         {
           headers: {
@@ -152,7 +152,7 @@ const Sidebar = ({ setSelectedGroup }) => {
       const userInfo = JSON.parse(localStorage.getItem("userInfo") || {});
       const token = userInfo.token;
       await axios.post(
-        `http://localhost:5000/api/groups/${groupId}/leave`,
+        `https://parab-chat-app.onrender.com/api/groups/${groupId}/leave`,
         {},
         {
           headers: {
