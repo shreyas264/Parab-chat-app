@@ -25,7 +25,11 @@ const Login = () => {
     setLoading(true)
     try {
       const {data} = await axios.post(
+<<<<<<< HEAD
         "https://parab-chat-app.onrender.com/api/users/login",
+=======
+        "https://parab-chat-app-backend.onrender.com/api/users/login",
+>>>>>>> 75f4b29f745f19a1822a60c76d21cbdf89f8032e
         {
           email,
           password,
